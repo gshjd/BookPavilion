@@ -16,13 +16,13 @@
 
    在终端中输入命令：`dashboard`并回车。
 
-   ![image-20210302113145845](/Users/xiaoxiong/Library/Application Support/typora-user-images/image-20210302113145845.png)
+   ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a4a1fc5e63204880af10301e8210e2ac~tplv-k3u1fbpfcp-watermark.image)
 
    如图会展示线程信息，内存信息，运行系统。
 
    线程信息中包含线程id，我们可以根据线程id查看线程栈，如图main方法的线程id是1，我们执行命令：`thread 1`。
 
-   ![image-20210302113622118](/Users/xiaoxiong/Library/Application Support/typora-user-images/image-20210302113622118.png)
+   ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9eefc5226b104c449d87aaa59352067b~tplv-k3u1fbpfcp-watermark.image)
 
    如图，可以清楚看到main方法中的栈信息。在栈内存中，我们看到main方法路径是：`demo.MathGame.main`，也就是说main方法在demo.MathGame下。
 
@@ -32,19 +32,19 @@
 
    - 终端执行命令：`sc -d *MathGame`。
 
-     ![image-20210302114141382](file:///Users/xiaoxiong/Library/Application%20Support/typora-user-images/image-20210302114141382.png?lastModify=1614656641)
+     ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4305641af44843fd84aba26dfa470332~tplv-k3u1fbpfcp-watermark.image)
 
      已经找到了这个类，并看到了这个类的相关信息。
 
    - 在终端控制台执行命令：`jad demo.MathGame`。
 
-     ![image-20210302114408530](file:///Users/xiaoxiong/Library/Application%20Support/typora-user-images/image-20210302114408530.png?lastModify=1614656641)
+     ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9e8f11efedf4ad0a53d9a38e95e145c~tplv-k3u1fbpfcp-watermark.image)
 
      如图，即可看到整个类的源码了。
 
      同时，我们还可以输入命令：`watch demo.MathGame primeFactors returnObj`来查看函数的参数/返回值/异常信息。
 
-     ![image-20210302115827331](/Users/xiaoxiong/Library/Application Support/typora-user-images/image-20210302115827331.png)
+     ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6a7c84e37a3f44e48714de18003430cb~tplv-k3u1fbpfcp-watermark.image)
 
 5. Profiler对项目采样生成火焰图
 
@@ -69,13 +69,13 @@
 
    执行命令：`profiler start -e cpu`
 
-   ![image-20210302142645793](/Users/xiaoxiong/Library/Application Support/typora-user-images/image-20210302142645793.png)
+   ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa536232f7a74f8abcfcccae4d83c842~tplv-k3u1fbpfcp-watermark.image)
 
    可以看到，cpu的火焰图正在绘制，执行命令`profiler status`可以看到profiler的状态，可以看到什么任务执行了多久。
 
-![image-20210302142814848](/Users/xiaoxiong/Library/Application Support/typora-user-images/image-20210302142814848.png)
+	![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/adddb74d561f4d839e8a19d021fe1c0a~tplv-k3u1fbpfcp-watermark.image)
 
-   当我们觉得检测的差不多了，可以看结果了，就执行命令`profiler stop`，会输出一张svg图片到output路径。	
+   当我们觉得检测的差不多了，可以看结果了，就执行命令`profiler stop`，会输出一张svg图片到output路径。
    
    output路径也可以手动指定，执行命令：`profiler stop --file 路径+文件名.svg`就能在指定路径输出svg火焰图了。	
    

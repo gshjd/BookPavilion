@@ -7,7 +7,7 @@
 2. #### 下载及启动arthas
 
    * 首先启动需要监测的项目。
-   * 下载Arthas，下载地址：https://arthas.aliyun.com/arthas-boot.jar。
+   * 下载Arthas，下载地址：https://arthas.aliyun.com/arthas-boot.jar 。
    * 打开命令终端窗口运行Arthas，Arthas根目录下执行命令：`java -jar arthas-boot.jar`。
    * Arthas启动会列出所有的Java进程，并显示序号。
    * 输入需要监测项目的序号，回车。（监测成功的情况，会显示Arthas的LOGO）
